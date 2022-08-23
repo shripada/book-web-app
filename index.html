@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+  </head>
+
+  <style>
+    #container {
+      padding: 10px;
+      background-color: crimson;
+    }
+    #message {
+      margin-top: 15px;
+      color: yellow;
+      font-family: monospace;
+      font-size: 20px;
+    }
+
+    h1 {
+      color: #f3f3f3;
+    }
+
+    label {
+      display: block;
+      padding: 10px;
+      margin: 0 10px;
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <h1>BOOK LIBRARY</h1>
+      <button id="action-button">Press Me!</button>
+      <button id="reset-button">Reset</button>
+      <div id="message">Start tapping the button to see the magic!</div>
+
+      <form id="book-form">
+        <label for="name">
+          Name: <input type="text" id="name" name="name"
+        /></label>
+        <label for="author">
+          Author: <input type="text" id="author" name="author"
+        /></label>
+        <label for="publisher">
+          Publisher: <input type="text" id="publisher" name="publisher"
+        /></label>
+        <label for="price">
+          Price: <input type="text" id="price" name="price"
+        /></label>
+
+        <p><button type="submit">Submit Form</button></p>
+      </form>
+    </div>
+
+    <script src="scripts/api.js" type="module"></script>
+  </body>
+</html>
