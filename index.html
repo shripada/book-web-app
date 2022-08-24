@@ -10,8 +10,26 @@
   <style>
     #container {
       padding: 10px;
-      background-color: crimson;
+      background-color: rosybrown;
+      max-width: 800px;
+      margin: auto;
     }
+
+    #form-container {
+      display: inline-block;
+      padding: 10px;
+      background-color: crimson;
+      max-width: 300px;
+    }
+
+    #book-list-container {
+      display: inline-block;
+      padding: 10px;
+      background-color: crimson;
+      max-width: 350px;
+      min-width: 300px;
+    }
+
     #message {
       margin-top: 15px;
       color: yellow;
@@ -21,38 +39,74 @@
 
     h1 {
       color: #f3f3f3;
+      text-align: center;
     }
 
     label {
       display: block;
-      padding: 10px;
-      margin: 0 10px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      color: greenyellow;
+    }
+
+    button {
+      display: block;
+      padding: 6px 15px;
+      border-radius: 5px;
+      width: 150px;
+      margin: auto;
+    }
+
+    form {
+      max-width: 200px;
+      margin: auto;
+    }
+
+    input {
+      width: 180px;
+      padding: 4px 8px;
+    }
+
+    #book-list li {
+      list-style: none;
+      padding: 10px 6px;
+      color: #f3f3f3;
+      font-size: 20px;
+      border: 1px solid yellow;
     }
   </style>
 
   <body>
     <div id="container">
-      <h1>BOOK LIBRARY</h1>
-      <button id="action-button">Press Me!</button>
+      <div id="form-container">
+        <h1>BOOK LIBRARY</h1>
+        <!-- <button id="action-button">Press Me!</button>
       <button id="reset-button">Reset</button>
-      <div id="message">Start tapping the button to see the magic!</div>
+      <div id="message">Start tapping the button to see the magic!</div> -->
 
-      <form id="book-form">
-        <label for="name">
-          Name: <input type="text" id="name" name="name"
-        /></label>
-        <label for="author">
-          Author: <input type="text" id="author" name="author"
-        /></label>
-        <label for="publisher">
-          Publisher: <input type="text" id="publisher" name="publisher"
-        /></label>
-        <label for="price">
-          Price: <input type="text" id="price" name="price"
-        /></label>
+        <form id="book-form">
+          <label for="name"> Name: </label>
+          <input type="text" id="name" name="name" value="Ananda Matha" />
+          <label for="author"> Author: </label>
+          <input type="text" id="author" name="author" value="Bankim Chandra" />
+          <label for="publisher"> Publisher: </label>
+          <input
+            type="text"
+            id="publisher"
+            name="publisher"
+            value="Gorakh Press"
+          />
+          <label for="price"> Price: </label>
+          <input type="text" id="price" name="price" value="200" />
+          <p><button type="submit">Submit Form</button></p>
+        </form>
+      </div>
 
-        <p><button type="submit">Submit Form</button></p>
-      </form>
+      <div id="book-list-container">
+        <h1>BOOK LIST</h1>
+        <ul id="book-list"></ul>
+        <button id="refresh-books-button">Refresh</button>
+      </div>
     </div>
 
     <script src="scripts/api.js" type="module"></script>
